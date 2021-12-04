@@ -17,5 +17,3 @@ vlad = Contact("Владимир Маяковский", "73-88", "19.07.1893", "
 
 mike.show_contact()
 vlad.show_contact()
-print(dir(Contact))
-print(Contact.__lt__)
