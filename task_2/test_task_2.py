@@ -1,7 +1,7 @@
 import pytest
 from author import mike as author_mike
 from author import vlad as author_vlad
-from precode import Contact
+from precode import Contact, vlad
 import precode
 
 
