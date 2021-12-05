@@ -41,11 +41,11 @@ class TestClass:
         assert vlad.birthday == author_vlad.birthday, send_msg_value_error("birthday", "vlad")
         assert vlad.address == author_vlad.address, send_msg_value_error("address", "vlad")
 
+    def test_print_contact(self):
+        assert not hasattr(precode, "print_contact"), "Функция print_contact не удалена"
+
     def test_output(self, task_2_output):
         mike_show_contact = "Михаил Булгаков — адрес: Россия, Москва, Большая Пироговская, дом 35б, кв. 6, телефон: 2-03-27, день рождения: 15.05.1891"
         vlad_show_contact = "Владимир Маяковский — адрес: Россия, Москва, Лубянский проезд, д. 3, кв. 12, телефон: 73-88, день рождения: 19.07.1893"
         assert mike_show_contact in task_2_output, "Обратитесь к методу show_contact() объекта mike"
         assert vlad_show_contact in task_2_output, "Обратитесь к методу show_contact() объекта vlad"
-
-    def test_print_contact(self):
-        assert hasattr(precode, "print_contact"), "Функция print_contact не удалена"
