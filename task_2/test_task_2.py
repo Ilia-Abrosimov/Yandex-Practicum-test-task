@@ -9,7 +9,7 @@ def send_msg_value_error(property, object):
     return f"Неверное значение свойства {property} у объекта {object}"
 
 
-class TestClass:
+class TestTask_2:
 
     def test_class_exist(self):
         try:
@@ -35,7 +35,7 @@ class TestClass:
         try:
             from precode import vlad
         except ImportError:
-            assert False, 'Отсутствует объект mike'
+            assert False, 'Отсутствует объект vlad'
         assert vlad.name == author_vlad.name, send_msg_value_error("name", "vlad")
         assert vlad.phone == author_vlad.phone, send_msg_value_error("phone", "vlad")
         assert vlad.birthday == author_vlad.birthday, send_msg_value_error("birthday", "vlad")
