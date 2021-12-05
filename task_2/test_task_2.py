@@ -4,8 +4,8 @@ from precode import Contact
 import precode
 
 
-def send_msg_value_error(property, object):
-    return f"Неверное значение свойства {property} у объекта {object}"
+def send_msg_value_error(feature, obj):
+    return f"Неверное значение свойства {feature} у объекта {obj}"
 
 
 class TestTask:
