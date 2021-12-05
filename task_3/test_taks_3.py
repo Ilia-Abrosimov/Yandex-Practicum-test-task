@@ -1,9 +1,8 @@
-import pytest
 from task_3.author import long_heavy as author_long_heavy
 from task_3.precode import long_heavy
 
 
-class TestTask_3:
+class TestTask:
 
     def test_func_exist(self):
         try:
@@ -20,18 +19,21 @@ class TestTask_3:
         assert author_result == precode_result, "Не изменяйте функцию long_heavy"
 
     def test_output(self, task_3_output):
-        ONE_SEC_TIME = "Время выполнения функции: 1.0 с."
-        ZERO_SEC_TIME = "Время выполнения функции: 0.0 с."
+        one_sec_time = "Время выполнения функции: 1.0 с."
+        zero_sec_time = "Время выполнения функции: 0.0 с."
         output = task_3_output.split("\n")
         author_result1 = author_long_heavy(1)
         author_result2 = author_long_heavy(2)
-        assert ONE_SEC_TIME == output[0], "Не изменяйте функцию time_check"
-        assert str(author_result1) == output[1], "Неверный вывод функции long_heavy"
-        assert ZERO_SEC_TIME == output[2], "Декоратор cache_args не кеширует значение декорируемой функции"
-        assert str(author_result1) == output[3], "Неверный вывод функции long_heavy"
-        assert ONE_SEC_TIME == output[4], "Не изменяйте функцию time_check"
-        assert str(author_result2) == output[5], "Неверный вывод функции long_heavy"
-        assert ZERO_SEC_TIME == output[6], "Декоратор cache_args не кеширует значение декорируемой функции"
-        assert str(author_result2) == output[7], "Неверный вывод функции long_heavy"
-        assert ZERO_SEC_TIME == output[8], "Декоратор cache_args не кеширует значение декорируемой функции"
-        assert str(author_result2) == output[9], "Неверный вывод функции long_heavy"
+        try:
+            assert one_sec_time == output[0], "Не изменяйте функцию time_check"
+            assert str(author_result1) == output[1], "Неверный вывод функции long_heavy"
+            assert zero_sec_time == output[2], "Декоратор cache_args не кеширует значение декорируемой функции"
+            assert str(author_result1) == output[3], "Неверный вывод функции long_heavy"
+            assert one_sec_time == output[4], "Не изменяйте функцию time_check"
+            assert str(author_result2) == output[5], "Неверный вывод функции long_heavy"
+            assert zero_sec_time == output[6], "Декоратор cache_args не кеширует значение декорируемой функции"
+            assert str(author_result2) == output[7], "Неверный вывод функции long_heavy"
+            assert zero_sec_time == output[8], "Декоратор cache_args не кеширует значение декорируемой функции"
+            assert str(author_result2) == output[9], "Неверный вывод функции long_heavy"
+        except IndexError:
+            assert False, "Проверьте правильность вывода"

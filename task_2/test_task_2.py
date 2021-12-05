@@ -1,7 +1,6 @@
-import pytest
 from author import mike as author_mike
 from author import vlad as author_vlad
-from precode import Contact, vlad
+from precode import Contact
 import precode
 
 
@@ -9,7 +8,7 @@ def send_msg_value_error(property, object):
     return f"Неверное значение свойства {property} у объекта {object}"
 
 
-class TestTask_2:
+class TestTask:
 
     def test_class_exist(self):
         try:

@@ -27,3 +27,13 @@ def task_3_output():
         '4'
     )
     return output
+
+
+@pytest.fixture()
+def task_4_output():
+    output = (
+        '5.0\n'
+        '4.0\n'
+        '2.0'
+    )
+    return output
